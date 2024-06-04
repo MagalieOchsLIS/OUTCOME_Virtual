@@ -1,0 +1,31 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/ScriptWindows/DataWindow.uss?fileID=7433441132597879392&amp;guid=eff8ff2e5a8ff2747b93f7158f4f155f&amp;type=3#DataWindow" />
+    <ui:Label tabindex="-1" text="Bone Angle Coefficients" parse-escape-sequences="true" display-tooltip-when-elided="true" enable-rich-text="true" style="-unity-font-style: bold; font-size: 16px;" />
+    <ui:GroupBox>
+        <ui:FloatField name="pose_Rx_coef" label="Head Rotation X" />
+        <ui:FloatField name="pose_Ry_coef" label="Head Rotation Y" />
+        <ui:FloatField name="pose_Rz_coef" label="Head Rotation Z" />
+        <ui:FloatField name="AU25_jaw_coef" label="AU25-Lips-Part Jaw Rotation" />
+        <ui:FloatField name="AU26_jaw_coef" label="AU26-Jaw-Drop Jaw Rotation" />
+    </ui:GroupBox>
+    <ui:Label tabindex="-1" text="Action Units Coefficients" parse-escape-sequences="true" display-tooltip-when-elided="true" enable-rich-text="true" style="-unity-font-style: bold; font-size: 16px;" />
+    <ui:GroupBox>
+        <ui:FloatField name="AU01_r_coef" label="AU01-Inner-Brow-Raiser Intensity" />
+        <ui:FloatField name="AU02_r_coef" label="AU02-Outer-Brow-Raiser Intensity" />
+        <ui:FloatField name="AU04_r_coef" label="AU04-Brow-Lowerer Intensity" />
+        <ui:FloatField name="AU05_r_coef" label="AU05-Upper-Lid-Raiser Intensity" />
+        <ui:FloatField name="AU06_r_coef" label="AU06-Cheek-Raiser Intensity" />
+        <ui:FloatField name="AU07_r_coef" label="AU07-Lid-Tightener Intensity" />
+        <ui:FloatField name="AU09_r_coef" label="AU09-Nose-Wrinkler Intensity" />
+        <ui:FloatField name="AU10_r_coef" label="AU10-Upper-Lip-Raiser Intensity" />
+        <ui:FloatField name="AU12_r_coef" label="AU12-Lip-Corner-Puller Intensity" />
+        <ui:FloatField name="AU14_r_coef" label="AU14-Dimpler Intensity" />
+        <ui:FloatField name="AU15_r_coef" label="AU15-Lip-Corner-Depressor Intensity" />
+        <ui:FloatField name="AU17_r_coef" label="AU17-Chin-Raiser Intensity" />
+        <ui:FloatField name="AU20_r_coef" label="AU20-Lip-Stretcher Intensity" />
+        <ui:FloatField name="AU23_r_coef" label="AU23-Lip-Tightener Intensity" />
+        <ui:FloatField name="AU25_r_coef" label="AU25-Lips-Part Intensity" />
+        <ui:FloatField name="AU28_max" label="AU28-Lip-Suck Max" />
+        <ui:FloatField name="AU45_r_coef" label="AU45-Blink Intensity" />
+</ui:GroupBox>
+</ui:UXML>
