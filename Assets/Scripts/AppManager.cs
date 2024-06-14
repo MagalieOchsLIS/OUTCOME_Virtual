@@ -34,9 +34,10 @@ public class AppManager : MonoBehaviour
     // Game Objects manipulated by the script
     public Transform Camera;
     public Transform activeAvatar;
-    public GameObject[] avatars;
+    public GameObject[] femaleAvatars;
+    public GameObject[] maleAvatars;
     Transform headBone;
-    SkinnedMeshRenderer[] smRenderers = new SkinnedMeshRenderer[2];
+    SkinnedMeshRenderer[] smRenderers = new SkinnedMeshRenderer[5];
     AudioSource voice;
     AudioSource mute = new AudioSource();
     // Eyes object in SALSA
@@ -67,19 +68,19 @@ public class AppManager : MonoBehaviour
     public FeedbackList GetFeedbackList() { return feedbackListItems; }
     public List<Frame> GetOgFrames() { return frames; }
     public int GetFirstFrameIndex() { return firstFrameIndex; }
-
+    public int GetLastFrameIndex() { return frames.Count - 1; }
+    public GameObject[] GetFemaleAvatars() { return femaleAvatars; }
+    public GameObject[] GetMaleAvatars() { return maleAvatars; }
     public void FindFirstFrame()
     {
         int i = 0;
 
         foreach (Frame frame in frames)
         {
-            //Debug.Log("frame confidence: " + frame.confidence);
 
             if (frame.confidence > 0.5)
             {
                 firstFrameIndex = i;
-                //Debug.Log("first frame : " + i);
                 break;
             }
 
@@ -116,7 +117,17 @@ public class AppManager : MonoBehaviour
     }
     public void ToggleLipSync(bool value)
     {
-        foreach (GameObject avatar in avatars)
+        foreach (GameObject avatar in femaleAvatars)
+        {
+            if (value)
+                avatar.GetComponent<Salsa>().audioSrc = voice;
+            else
+                avatar.GetComponent<Salsa>().audioSrc = mute;
+
+
+        }
+
+        foreach (GameObject avatar in maleAvatars)
         {
             if (value)
                 avatar.GetComponent<Salsa>().audioSrc = voice;
@@ -130,6 +141,7 @@ public class AppManager : MonoBehaviour
     public void ToggleNoiseReduction(bool value)
     {
         noiseReduced = value;
+        blendshapeAnimator.SetFeedback();
     }
     public void LoadFeedbackRessources(int feedbackID)
     {
@@ -174,7 +186,7 @@ public class AppManager : MonoBehaviour
 
         blendshapeAnimator.SetFeedback();
 
-        Debug.Log("Video frames : " + player.frameCount + " | OpenFace frames : " + frames.Count);
+        //Debug.Log("Video frames : " + player.frameCount + " | OpenFace frames : " + frames.Count);
 
         if (actionUnitData == null)
         {
@@ -190,28 +202,26 @@ public class AppManager : MonoBehaviour
     {
         headBone = activeAvatar.Find("CC_Base_BoneRoot").GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetChild(2).GetChild(0).GetChild(0);
 
-
-        smRenderers[0] = activeAvatar.Find("Brows").GetComponent<SkinnedMeshRenderer>();
-        smRenderers[1] = activeAvatar.Find("CC_Base_Body").GetComponent<SkinnedMeshRenderer>();
-        //smRenderers[2] = activeAvatar.GetChild(0).Find("Brows_Extracted0").GetComponent<SkinnedMeshRenderer>();
+        if (activeAvatar.Find("Brows") != null)
+            smRenderers[0] = activeAvatar.Find("Brows").GetComponent<SkinnedMeshRenderer>();
+        if (activeAvatar.Find("CC_Base_Body") != null)
+            smRenderers[1] = activeAvatar.Find("CC_Base_Body").GetComponent<SkinnedMeshRenderer>();
+        if (activeAvatar.Find("Brows_Extracted0") != null)
+            smRenderers[2] = activeAvatar.Find("Brows_Extracted0").GetComponent<SkinnedMeshRenderer>();
+        if (activeAvatar.Find("Beard") != null)
+            smRenderers[3] = activeAvatar.Find("Beard").GetComponent<SkinnedMeshRenderer>();
+        if (activeAvatar.Find("Mustache") != null)
+            smRenderers[4] = activeAvatar.Find("Mustache").GetComponent<SkinnedMeshRenderer>();
 
         eyes = activeAvatar.GetComponent<Eyes>();
     }
-    public void ChangeActiveAvatar(int value)
+    public void ChangeActiveAvatar(GameObject avatar)
     {
-        for (int i = 0; i < avatars.Length; i++)
-        {
-            if (i == value)
-            {
-                avatars[i].SetActive(true);
-            }
-            else
-            {
-                avatars[i].SetActive(false);
-            }
-        }
 
-        activeAvatar = avatars[value].transform;
+        activeAvatar.gameObject.SetActive(false);
+        avatar.SetActive(true);
+
+        activeAvatar = avatar.transform;
         SetAvatarProps();
         blendshapeAnimator.SetAvatarProps();
     }
@@ -239,24 +249,25 @@ public class AppManager : MonoBehaviour
             // play the video assigned to the VideoPlayer component only then play the avatar's animation
             
             player.Play();
-
-            isFeedbackPlayed = true;
-
-            voice.Play();
+            StartCoroutine(blendshapeAnimator.PrepareFeedback());
 
         }
         else
         {
             //if there's no VideoPlayer assigned, the animation is good on its own
-            isFeedbackPlayed = true;
-
-            voice.Play();
+            StartCoroutine(blendshapeAnimator.PrepareFeedback());
         }
+    }
+
+    public void FeedbackLAuncher()
+    {
+        isFeedbackPlayed = true;
+
+        voice.Play();
     }
     public void PlayFeedbackUpdate()
     {
 
-        //Debug.Log((int)player.frame);
 
         //if VideoPlayer is active it overrides normal frame index
         if (vidSync && player != null)
@@ -267,7 +278,6 @@ public class AppManager : MonoBehaviour
         //if VideoPlayer's active frame isn't null or videoplayer is disabled
         if ((int)player.frame > -1 || !vidSync || player == null)
         {
-            //Debug.Log(frameIndex + " | " + (frames.Count - 1));
 
             if (frameIndex < frames.Count - 1)
             {
@@ -313,9 +323,6 @@ public class AppManager : MonoBehaviour
 
         // time is unstoppable
         time += Time.deltaTime;
-
-        //bsIndex = smRenderers[1].sharedMesh.GetBlendShapeIndex("Mouth_Smile_L");
-        //Debug.Log("frame " + frames[frameIndex].frame + " | time " + time + " | timestamp " + frames[frameIndex].timestamp + " | AU " + frames[frameIndex].AU12_r + " | BS " + smRenderers[1].GetBlendShapeWeight(bsIndex));
     }
     public void ResetPlayFeedback()
     {
@@ -326,7 +333,7 @@ public class AppManager : MonoBehaviour
         Instance.SetEyeAnimsEnabled(true);
         time = 0f;
 
-        blendshapeAnimator.ResetFRxpression();
+        StartCoroutine(blendshapeAnimator.ResetFExpression());
 
         if (vidSync && player != null) {
             player.Stop();
@@ -451,6 +458,7 @@ public class AppManager : MonoBehaviour
     {
 
         ui = GameObject.Find("Canvas_Menu");
+        activeAvatar = femaleAvatars[0].transform;
 
         SetAvatarProps();
 
@@ -460,8 +468,8 @@ public class AppManager : MonoBehaviour
 
         LoadFeedbackRessources(0);
 
-
-    }
+        
+}
 
     // Update is called once per frame
     void Update()
@@ -474,11 +482,6 @@ public class AppManager : MonoBehaviour
         }
 
 
-
-        //if (feedbackRecorder.readyToPlay)
-        //{
-        //    PlayFeedback();
-        //}
     }
 
 }
