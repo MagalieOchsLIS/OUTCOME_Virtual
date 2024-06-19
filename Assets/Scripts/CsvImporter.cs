@@ -20,8 +20,10 @@ public static class CsvImporter
         // Going though lines array ignoring the 1st line with keys
         for (int i = 1; i < lines.Length - 1; i++)
         {
-
-            values = lines[i].Split(", ");
+            if (lines[i].Contains(", "))
+                values = lines[i].Split(", ");
+            else
+                values = lines[i].Split(",");
 
             Frame newFrame = new Frame();
 
@@ -84,4 +86,5 @@ public static class CsvImporter
 
         return frames;
     }
+
 }
