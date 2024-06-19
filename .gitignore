@@ -76,3 +76,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Rr]esources.meta
 /[Aa]ssets/[Ss]amples/
 /[Aa]ssets/[Ss]amples.meta
+
+/FeedbackRecordings/
