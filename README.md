@@ -63,35 +63,35 @@ Don’t forget to keep the ID’s unique and separate entries with a comma. Afte
 
 The app interface consists of several control buttons, 2 menus and a set of settings. 
 
-## Avatar selection menu
+### Avatar selection menu
 There are 20 diverse avatars available for the virtual agent: 10 female and 10 male, all can be chosen via the avatar selection menu in the top right corner of the screen. 
 
-## Feedback selection menu
+### Feedback selection menu
 The Feedback performed by the selected avatar can be picked in the Feedback menu in the bottom right corner. New custom Feedbacks can be added by the user.
 
-## Playing Feedback
+### Playing Feedback
 In order to play the selected feedback, the user should press the Play Button in the top center. By default the virtual agent adopts only Action Unit values captured by OpenFace but there are some settings to alter that:
 
-## Lip-sync
+### Lip-sync
 When active, replaces lips-related Action Units and jaw movement values with those calculated with Salsa module in accordance to the designated feedback audio track resulting in a more faithful labial expressions during speech.
 
-## Frame Interpolation
+### Frame Interpolation
 When active, it applies interpolated intermediate Action Unit values between video frames resulting in a higher FPS and thus smoother movement than on the original video.
 
-## Noise Reduction
+### Noise Reduction
 When active, seeks out irregularly abrupt movements using statistical methods and smoothes them down.
 
-## Play source video:
+### Play source video:
 When active, adds a reference video player element in the background playing the active Feedback in sync with the virtual agent.
 
-## Customizing Action Unit Conversion Parameters
+### Customizing Action Unit Conversion Parameters
 Action Unit data produced by OpenFace isn’t directly compatible with the avatars in use and thus it’s being converted in real time with the results that may turn out imperfect. For that reason, there’s an option to edit the multipliers in the developer version of the app. 
 
 For that, you need to look for the DataWindow in the Unity editor. If it’s missing, you can open it by clicking on Window/UI Toolkit/DataWindow
 
 In case you want to revert your changes, feel free to look into the screenshot to the right
 
-## Recording Feedback
+### Recording Feedback
 There’s also an option to record the Feedbacks in 1080p 60fps mp4 format for further analyses. In order to record the selected Feedback, the user is to push the Record button  in the top center. The recording will start immediately however the Feedback will start playing in a few seconds for the future viewer’s comfort and for the same reason the recording will go on for a few more seconds after the Feedback stopped playing. 
 
 Warning: you will not hear any sound produced by the app during recording! This is normal and will not affect the final videos.
@@ -102,5 +102,5 @@ There’s also an option to record all the Feedbacks available in a batch. You c
 
 There is only one setting related to recording that will be applied in both cases.
 
-## Hide UI on Recording :
+### Hide UI on Recording :
 When active, removes the UI each time before the recording has begun and restores it immediately afterwards.
