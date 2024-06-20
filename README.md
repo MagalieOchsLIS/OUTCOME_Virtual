@@ -2,92 +2,105 @@
 
 
 
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://gitlab.com/nwh3/OpenFace-Unity_HDRP.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.com/nwh3/OpenFace-Unity_HDRP/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+1.Download the following:
+-Unity hub: https://unity.com/download
+-Unity Editor v2022.3.24f1 (when the hub is installed): unityhub://2022.3.24f1/334eb2a0b267
+-A desktop app compatible with GitLab: https://gitextensions.github.io
+-The project (using GitLab)
+-Feedback Resources folder: https://drive.google.com/drive/folders/1M7w5lsE9E4ncZNu8HWR77qdJ0jst41af?usp=sharing
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+2.Copy the Resources folder to OpenFace-Unity_HDRP/Assets/
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+3.Import OpenFace-Unity_HDRP as a project using Unity hub
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+4.If you are going to modify the project, open Git Bash (should be installed with Git app) and enter the following command to avoid “too long path” error while committing the project to GitLab:
+git config --system core.longpaths true
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+5.Open the project and open the only scene in Assets/Scenes via the Project window
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+## Adding new feedback
 
-## License
-For open source projects, say how it is licensed.
+1.Download and install Python: https://www.python.org/downloads/
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+2.Download and install FFmpeg build following the instruction below:
+https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-essentials.7z
+https://www.hostinger.com/tutorials/how-to-install-ffmpeg
+
+3.Download OpenFace: https://sourceforge.net/projects/openface.mirror/
+
+4.Download the video pre-treatment script: https://drive.google.com/drive/folders/1ZSYP_PdBIB5PjZcdl6F5-48s1jgLlTXq?usp=sharing
+
+5.Copy OUTCOME_V_Feedback_Treatment folder you’ve just downloaded to the OpenFace root
+
+6.Copy all the feedback videos you want to be treated to OUTCOME_V_Feedback_Treatment/Video_input
+
+7.Launch OUTCOME_Vl_Feedback_Treatment/Video_pre-Treatment.bat” and wait till it finishes its work (it will also automatically install the necessary libraries)
+
+8.Copy all videos from OUTCOME_V_Feedback_Treatment/Video_output to Assets/Resources/Video in the Unity project folder
+
+9.Copy all audio tracks from OUTCOME_V_Feedback_Treatment/Audio_output to Assets/Resources/Audio in the Unity project folder
+
+10.Copy all OpenFace CSV tables from OUTCOME_V_Feedback_Treatment/OpenFace_output to Assets/Resources/OpenFace in the Unity project folder
+
+11.Edit Assets/Resources/FeedbackData.json and add entries for every new feedback you are adding in accordance with the following example:
+    {
+  		"id": 20,
+  		"name": "Feedback_Name",
+  	"path_OpenFace": "OpenFace/CSV_Name",
+  		"path_Video": "Video/Video_Name",
+  	"path_Audio": "Audio/Audio_Name"
+	},
+	
+Don’t forget to keep the ID’s unique and separate entries with a comma. After saving the JSON, new feedbacks should appear at the end of the respective menu.
+
+12.If you experience wobbly head animations with your feedback, replace the respective CSV in Assets/Resources/OpenFace with its analogue from OUTCOME Virtual_Feedback_Treatment/OpenFace_output_smooth. No need to edit the JSON
+
+
+## OUTCOME Virtual Interface
+
+The app interface consists of several control buttons, 2 menus and a set of settings. 
+
+## Avatar selection menu
+There are 20 diverse avatars available for the virtual agent: 10 female and 10 male, all can be chosen via the avatar selection menu in the top right corner of the screen. 
+
+## Feedback selection menu
+The Feedback performed by the selected avatar can be picked in the Feedback menu in the bottom right corner. New custom Feedbacks can be added by the user.
+
+## Playing Feedback
+In order to play the selected feedback, the user should press the Play Button in the top center. By default the virtual agent adopts only Action Unit values captured by OpenFace but there are some settings to alter that:
+
+## Lip-sync
+When active, replaces lips-related Action Units and jaw movement values with those calculated with Salsa module in accordance to the designated feedback audio track resulting in a more faithful labial expressions during speech.
+
+## Frame Interpolation
+When active, it applies interpolated intermediate Action Unit values between video frames resulting in a higher FPS and thus smoother movement than on the original video.
+
+## Noise Reduction
+When active, seeks out irregularly abrupt movements using statistical methods and smoothes them down.
+
+## Play source video:
+When active, adds a reference video player element in the background playing the active Feedback in sync with the virtual agent.
+
+## Customizing Action Unit Conversion Parameters
+Action Unit data produced by OpenFace isn’t directly compatible with the avatars in use and thus it’s being converted in real time with the results that may turn out imperfect. For that reason, there’s an option to edit the multipliers in the developer version of the app. 
+
+For that, you need to look for the DataWindow in the Unity editor. If it’s missing, you can open it by clicking on Window/UI Toolkit/DataWindow
+
+In case you want to revert your changes, feel free to look into the screenshot to the right
+
+## Recording Feedback
+There’s also an option to record the Feedbacks in 1080p 60fps mp4 format for further analyses. In order to record the selected Feedback, the user is to push the Record button  in the top center. The recording will start immediately however the Feedback will start playing in a few seconds for the future viewer’s comfort and for the same reason the recording will go on for a few more seconds after the Feedback stopped playing. 
+
+Warning: you will not hear any sound produced by the app during recording! This is normal and will not affect the final videos.
+
+The videos will be saved in the FeedbackRecordings folder in the app’s root. Recording a given Feedback for the second time will erase the old recording.
+
+There’s also an option to record all the Feedbacks available in a batch. You can do it by pressing the Record all Feedbacks button  to the right, squeezed in between Avatar and Feedback menus. The Feedbacks will be recorded one by one in the order they are stored in the list and will be saved in separate files.
+
+There is only one setting related to recording that will be applied in both cases.
+
+## Hide UI on Recording :
+When active, removes the UI each time before the recording has begun and restores it immediately afterwards.
