@@ -668,7 +668,8 @@ public class BlendshapeAnimator : MonoBehaviour
         foreach (SkinnedMeshRenderer renderer in smRenderers)
         {
 
-            if (renderer != null) { 
+            if (renderer != null)
+            {
 
                 bsIndex = renderer.sharedMesh.GetBlendShapeIndex("Brow_Raise_Inner_L");
 
@@ -676,11 +677,12 @@ public class BlendshapeAnimator : MonoBehaviour
                 {
                     if (AppManager.Instance.frameInterpol)
                     {
+
                         renderer.SetBlendShapeWeight(bsIndex, Mathf.Lerp(frame.AU01_c ? frame.AU01_r : 0f, nextFrame.AU01_c ? nextFrame.AU01_r : 0f, frameTime) * param.AU01_r_coef);
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU01_c ? frame.AU01_r : 0f * param.AU01_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU01_c ? frame.AU01_r : 0f) * param.AU01_r_coef);
 
                     }
                 }
@@ -695,7 +697,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU01_c ? frame.AU01_r : 0f * param.AU01_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU01_c ? frame.AU01_r : 0f) * param.AU01_r_coef);
 
                     }
                 }
@@ -713,7 +715,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU02_c ? frame.AU02_r : 0f * param.AU02_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU02_c ? frame.AU02_r : 0f) * param.AU02_r_coef);
 
                     }
                 }
@@ -728,7 +730,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU02_c ? frame.AU02_r : 0f * param.AU02_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU02_c ? frame.AU02_r : 0f) * param.AU02_r_coef);
 
                     }
                 }
@@ -746,7 +748,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU04_c ? frame.AU04_r : 0f * param.AU04_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU04_c ? frame.AU04_r : 0f) * param.AU04_r_coef);
 
                     }
                 }
@@ -761,7 +763,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU04_c ? frame.AU04_r : 0f * param.AU04_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU04_c ? frame.AU04_r : 0f) * param.AU04_r_coef);
 
                     }
                 }
@@ -777,7 +779,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU05_c ? frame.AU05_r : 0f * param.AU05_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU05_c ? frame.AU05_r : 0f) * param.AU05_r_coef);
 
                     }
                 }
@@ -792,7 +794,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU05_c ? frame.AU05_r : 0f * param.AU05_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU05_c ? frame.AU05_r : 0f) * param.AU05_r_coef);
 
                     }
                 }
@@ -811,7 +813,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU06_c ? frame.AU06_r : 0f * param.AU06_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU06_c ? frame.AU06_r : 0f) * param.AU06_r_coef);
 
                     }
                 }
@@ -826,7 +828,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU06_c ? frame.AU06_r : 0f * param.AU06_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU06_c ? frame.AU06_r : 0f) * param.AU06_r_coef);
 
                     }
                 }
@@ -844,7 +846,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU07_c ? frame.AU07_r : 0f * param.AU07_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU07_c ? frame.AU07_r : 0f) * param.AU07_r_coef);
 
                     }
                 }
@@ -859,7 +861,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU07_c ? frame.AU07_r : 0f * param.AU07_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU07_c ? frame.AU07_r : 0f) * param.AU07_r_coef);
 
                     }
                 }
@@ -877,7 +879,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU09_c ? frame.AU09_r : 0f * param.AU09_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU09_c ? frame.AU09_r : 0f) * param.AU09_r_coef);
 
                     }
                 }
@@ -892,7 +894,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU09_c ? frame.AU09_r : 0f * param.AU09_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU09_c ? frame.AU09_r : 0f) * param.AU09_r_coef);
 
                     }
                 }
@@ -910,7 +912,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU10_c ? frame.AU10_r : 0f * param.AU10_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU10_c ? frame.AU10_r : 0f) * param.AU10_r_coef);
 
                     }
                 }
@@ -925,7 +927,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU10_c ? frame.AU10_r : 0f * param.AU10_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU10_c ? frame.AU10_r : 0f) * param.AU10_r_coef);
 
                     }
                 }
@@ -939,11 +941,13 @@ public class BlendshapeAnimator : MonoBehaviour
                 {
                     if (AppManager.Instance.frameInterpol)
                     {
+                        
                         renderer.SetBlendShapeWeight(bsIndex, Mathf.Lerp(frame.AU12_c ? frame.AU12_r : 0f, nextFrame.AU12_c ? nextFrame.AU12_r : 0f, frameTime) * param.AU12_r_coef);
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU12_c ? frame.AU12_r : 0f * param.AU12_r_coef);
+                        
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU12_c ? frame.AU12_r : 0f) * param.AU12_r_coef);
 
                     }
                 }
@@ -958,7 +962,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU12_c ? frame.AU12_r : 0f * param.AU12_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU12_c ? frame.AU12_r : 0f) * param.AU12_r_coef);
 
                     }
                 }
@@ -976,7 +980,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU14_c ? frame.AU14_r : 0f * param.AU14_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU14_c ? frame.AU14_r : 0f) * param.AU14_r_coef);
 
                     }
                 }
@@ -991,7 +995,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU14_c ? frame.AU14_r : 0f * param.AU14_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU14_c ? frame.AU14_r : 0f) * param.AU14_r_coef);
 
                     }
                 }
@@ -1009,7 +1013,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU15_c ? frame.AU15_r : 0f * param.AU15_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU15_c ? frame.AU15_r : 0f) * param.AU15_r_coef);
 
                     }
                 }
@@ -1024,7 +1028,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU15_c ? frame.AU15_r : 0f * param.AU15_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU15_c ? frame.AU15_r : 0f) * param.AU15_r_coef);
 
                     }
                 }
@@ -1042,7 +1046,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU17_c ? frame.AU17_r : 0f * param.AU17_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU17_c ? frame.AU17_r : 0f) * param.AU17_r_coef);
 
                     }
                 }
@@ -1060,7 +1064,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU20_c ? frame.AU20_r : 0f * param.AU20_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU20_c ? frame.AU20_r : 0f) * param.AU20_r_coef);
 
                     }
                 }
@@ -1075,7 +1079,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU20_c ? frame.AU20_r : 0f * param.AU20_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU20_c ? frame.AU20_r : 0f) * param.AU20_r_coef);
 
                     }
                 }
@@ -1093,7 +1097,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU23_c ? frame.AU23_r : 0f * param.AU23_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU23_c ? frame.AU23_r : 0f) * param.AU23_r_coef);
 
                     }
                 }
@@ -1108,7 +1112,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU23_c ? frame.AU23_r : 0f * param.AU23_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU23_c ? frame.AU23_r : 0f) * param.AU23_r_coef);
 
                     }
                 }
@@ -1126,7 +1130,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU25_c ? frame.AU25_r : 0f * param.AU25_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU25_c ? frame.AU25_r : 0f) * param.AU25_r_coef);
 
                     }
                 }
@@ -1141,7 +1145,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU28_c ? param.AU28_max : 0f);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU28_c ? param.AU28_max : 0f));
 
                     }
                 }
@@ -1156,7 +1160,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU28_c ? param.AU28_max : 0f);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU28_c ? param.AU28_max : 0f));
 
                     }
                 }
@@ -1171,7 +1175,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU28_c ? param.AU28_max : 0f);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU28_c ? param.AU28_max : 0f));
 
                     }
                 }
@@ -1186,7 +1190,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU28_c ? param.AU28_max : 0f);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU28_c ? param.AU28_max : 0f));
 
                     }
                 }
@@ -1201,7 +1205,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU45_c ? frame.AU45_r : 0f * param.AU45_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU45_c ? frame.AU45_r : 0f) * param.AU45_r_coef);
 
                     }
                 }
@@ -1216,7 +1220,7 @@ public class BlendshapeAnimator : MonoBehaviour
                     }
                     else
                     {
-                        renderer.SetBlendShapeWeight(bsIndex, frame.AU45_c ? frame.AU45_r : 0f * param.AU45_r_coef);
+                        renderer.SetBlendShapeWeight(bsIndex, (frame.AU45_c ? frame.AU45_r : 0f) * param.AU45_r_coef);
 
                     }
                 }
@@ -1229,12 +1233,21 @@ public class BlendshapeAnimator : MonoBehaviour
 
         // Head mouvement
         vectorTemp = headBone.transform.rotation.eulerAngles;
+        float x;
+        float y; 
+        float z;
+        if (AppManager.Instance.frameInterpol) { 
+            x = (Mathf.Lerp(frame.pose_Rx * 57.2958f, nextFrame.pose_Rx * 57.2958f, frameTime) - corFrames[firstFrameIndex].pose_Rx * 57.2958f) * param.pose_Rx_coef;
+            y = 180 + (Mathf.Lerp(frame.pose_Ry * 57.2958f, nextFrame.pose_Ry * 57.2958f, frameTime) - corFrames[firstFrameIndex].pose_Ry * 57.2958f) * param.pose_Ry_coef;
+            z = (Mathf.Lerp(frame.pose_Rz * 57.2958f, nextFrame.pose_Rz * 57.2958f, frameTime) - corFrames[firstFrameIndex].pose_Rz * 57.2958f) * param.pose_Rz_coef;
+        }
+        else
+        {
+            x = (frame.pose_Rx * 57.2958f - corFrames[firstFrameIndex].pose_Rx * 57.2958f) * param.pose_Rx_coef;
+            y = 180 + (frame.pose_Ry * 57.2958f - corFrames[firstFrameIndex].pose_Ry * 57.2958f) * param.pose_Ry_coef;
+            z = (frame.pose_Rz * 57.2958f - corFrames[firstFrameIndex].pose_Rz * 57.2958f) * param.pose_Rz_coef;
+        }
 
-        float x = (Mathf.Lerp(frame.pose_Rx * 57.2958f, nextFrame.pose_Rx * 57.2958f, frameTime) - corFrames[firstFrameIndex].pose_Rx * 57.2958f) * param.pose_Rx_coef;
-        float y = 180 + (Mathf.Lerp(frame.pose_Ry * 57.2958f, nextFrame.pose_Ry * 57.2958f, frameTime) - corFrames[firstFrameIndex].pose_Ry * 57.2958f) * param.pose_Ry_coef;
-        float z = (Mathf.Lerp(frame.pose_Rz * 57.2958f, nextFrame.pose_Rz * 57.2958f, frameTime) - corFrames[firstFrameIndex].pose_Rz * 57.2958f) * param.pose_Rz_coef;
-
-        
 
         vectorTemp.x = x;
         vectorTemp.y = y;
@@ -1249,9 +1262,17 @@ public class BlendshapeAnimator : MonoBehaviour
             jawBone.transform.localRotation = Quaternion.identity;
 
             vectorTemp.z = -90;
-            vectorTemp.z += Mathf.Lerp(frame.AU25_c ? frame.AU25_r : 0f, nextFrame.AU25_c ? nextFrame.AU25_r : 0f, frameTime) * param.AU25_jaw_coef;
-            vectorTemp.z += Mathf.Lerp(frame.AU26_c ? frame.AU26_r : 0f, nextFrame.AU26_c ? nextFrame.AU26_r : 0f, frameTime) * param.AU26_jaw_coef;
 
+            if (AppManager.Instance.frameInterpol)
+            {
+                vectorTemp.z += Mathf.Lerp(frame.AU25_c ? frame.AU25_r : 0f, nextFrame.AU25_c ? nextFrame.AU25_r : 0f, frameTime) * param.AU25_jaw_coef;
+                vectorTemp.z += Mathf.Lerp(frame.AU26_c ? frame.AU26_r : 0f, nextFrame.AU26_c ? nextFrame.AU26_r : 0f, frameTime) * param.AU26_jaw_coef;
+            }
+            else
+            {
+                vectorTemp.z += (frame.AU25_c ? frame.AU25_r : 0f) * param.AU25_jaw_coef;
+                vectorTemp.z += (frame.AU26_c ? frame.AU26_r : 0f) * param.AU26_jaw_coef;
+            }
             jawBone.transform.localRotation = Quaternion.Euler(vectorTemp);
         }
 
@@ -1261,22 +1282,33 @@ public class BlendshapeAnimator : MonoBehaviour
         vectorTemp = eyeLeftBone.transform.localRotation.eulerAngles;
 
         eyeLeftBone.transform.localRotation = Quaternion.identity;
-
-        vectorTemp.z = initialVectorEyeLeft.z + (Mathf.Lerp(frame.gaze_angle_x * 57.2958f, nextFrame.gaze_angle_x * 57.2958f, frameTime) - corFrames[firstFrameIndex].gaze_angle_x * 57.2958f);
-        vectorTemp.y = initialVectorEyeLeft.y + (Mathf.Lerp(frame.gaze_angle_y * 57.2958f, nextFrame.gaze_angle_y * 57.2958f, frameTime) - corFrames[firstFrameIndex].gaze_angle_y * 57.2958f);
-
+        if (AppManager.Instance.frameInterpol) { 
+            vectorTemp.z = initialVectorEyeLeft.z + (Mathf.Lerp(frame.gaze_angle_x * 57.2958f, nextFrame.gaze_angle_x * 57.2958f, frameTime) - corFrames[firstFrameIndex].gaze_angle_x * 57.2958f);
+            vectorTemp.y = initialVectorEyeLeft.y + (Mathf.Lerp(frame.gaze_angle_y * 57.2958f, nextFrame.gaze_angle_y * 57.2958f, frameTime) - corFrames[firstFrameIndex].gaze_angle_y * 57.2958f);
+        }
+        else
+        {
+            vectorTemp.z = initialVectorEyeLeft.z + (frame.gaze_angle_x * 57.2958f - corFrames[firstFrameIndex].gaze_angle_x * 57.2958f);
+            vectorTemp.y = initialVectorEyeLeft.y + (frame.gaze_angle_y * 57.2958f - corFrames[firstFrameIndex].gaze_angle_y * 57.2958f);
+        }
         eyeLeftBone.transform.localRotation = Quaternion.Euler(vectorTemp);
         
 
         vectorTemp = eyeRightBone.transform.localRotation.eulerAngles;
 
         eyeRightBone.transform.localRotation = Quaternion.identity;
-
-        vectorTemp.z = initialVectorEyeRight.z + (Mathf.Lerp(frame.gaze_angle_x * 57.2958f, nextFrame.gaze_angle_x * 57.2958f, frameTime) - corFrames[firstFrameIndex].gaze_angle_x * 57.2958f);
-        vectorTemp.y = initialVectorEyeRight.y + (Mathf.Lerp(frame.gaze_angle_y * 57.2958f, nextFrame.gaze_angle_y * 57.2958f, frameTime) - corFrames[firstFrameIndex].gaze_angle_y * 57.2958f);
-
+        if (AppManager.Instance.frameInterpol)
+        {
+            vectorTemp.z = initialVectorEyeRight.z + (Mathf.Lerp(frame.gaze_angle_x * 57.2958f, nextFrame.gaze_angle_x * 57.2958f, frameTime) - corFrames[firstFrameIndex].gaze_angle_x * 57.2958f);
+            vectorTemp.y = initialVectorEyeRight.y + (Mathf.Lerp(frame.gaze_angle_y * 57.2958f, nextFrame.gaze_angle_y * 57.2958f, frameTime) - corFrames[firstFrameIndex].gaze_angle_y * 57.2958f);
+        }
+        else
+        {
+            
+            vectorTemp.z = initialVectorEyeRight.z + (frame.gaze_angle_x * 57.2958f - corFrames[firstFrameIndex].gaze_angle_x * 57.2958f);
+            vectorTemp.y = initialVectorEyeRight.y + (frame.gaze_angle_y * 57.2958f - corFrames[firstFrameIndex].gaze_angle_y * 57.2958f);
+        }
         eyeRightBone.transform.localRotation = Quaternion.Euler(vectorTemp);
-        
     }
 
     public IEnumerator ResetFExpression()
@@ -1286,6 +1318,7 @@ public class BlendshapeAnimator : MonoBehaviour
         
         while (time <= resetTime)
         {
+            Debug.Log("test");
             //frameTime = (time - curFrame.timestamp) / (nextFrame.timestamp - curFrame.timestamp);
             frameTime = time / resetTime;
             SetFExpression(corFrames[lastFrameIndex], idleFrame, frameTime);
