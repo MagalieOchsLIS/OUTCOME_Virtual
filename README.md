@@ -21,7 +21,7 @@ git config --system core.longpaths true
 5.Open the project and open the only scene in Assets/Scenes via the Project window
 
 
-## Adding new feedback
+## Adding new animation
 
 1.Download and install Python: https://www.python.org/downloads/
 
